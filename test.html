@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学在浙大签到测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>学在浙大签到测试页面</h1>
+    
+    <div class="test-section">
+        <h2>测试场景 1: 数字签到</h2>
+        <p>点击按钮添加包含"数字签到"字样的元素</p>
+        <button onclick="addSignIn('数字签到')">添加数字签到</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>测试场景 2: 雷达签到</h2>
+        <p>点击按钮添加包含"雷达签到"字样的元素</p>
+        <button onclick="addSignIn('雷达签到')">添加雷达签到</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>测试场景 3: 数字输入框</h2>
+        <p>点击按钮添加包含"请输入4位数字"占位符的输入框</p>
+        <button onclick="addNumberInput()">添加数字输入框</button>
+    </div>
+    
+    <div id="content"></div>
+    
+    <script>
+        function addSignIn(type) {
+            const content = document.getElementById('content');
+            const div = document.createElement('div');
+            div.textContent = `当前活动: ${type}`;
+            div.style.padding = '10px';
+            div.style.margin = '10px 0';
+            div.style.backgroundColor = '#f0f0f0';
+            content.appendChild(div);
+        }
+        
+        function addNumberInput() {
+            const content = document.getElementById('content');
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.placeholder = '请输入4位数字';
+            input.style.margin = '10px 0';
+            content.appendChild(input);
+        }
+    </script>
+</body>
+</html>

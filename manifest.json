@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "学在浙大签到提醒",
+  "version": "1.0.0",
+  "description": "监控学在浙大(learning.zju.edu.cn)网站的签到活动，自动检测数字签到和雷达签到，通过系统通知和Server酱推送及时提醒用户",
+  "permissions": [
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://sctapi.ftqq.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://learning.zju.edu.cn/*", "file:///*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
