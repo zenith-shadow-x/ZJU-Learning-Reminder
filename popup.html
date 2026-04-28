@@ -107,21 +107,14 @@
     <h1>学在浙大签到提醒</h1>
 
     <div class="setting-item">
-        <label for="pushKeyInput">推送 Key</label>
-        <input type="text" id="pushKeyInput" placeholder="请输入 SendKey 或 PushKey">
-        <button id="saveBtn">保存 Key</button>
+        <label for="pushKeyInput">推送配置 (Server酱/SendKey)</label>
+        <input type="text" id="pushKeyInput" placeholder="在此粘贴 SCT 开头的 SendKey">
+        <button id="saveBtn">保存配置</button>
         <div id="status" class="status"></div>
     </div>
 
     <div class="info">
-        如何获取推送 Key？<br>
-        <strong>Server酱/方糖：</strong><br>
-        1. 微信搜索关注「方糖」公众号<br>
-        2. 点击菜单「登入并获得 SendKey」<br>
-        <strong>PushDeer：</strong><br>
-        1. 安装 PushDeer App<br>
-        2. 访问 <a href="https://api2.pushdeer.com" target="_blank">api2.pushdeer.com</a><br>
-        3. 在"我的应用"中创建应用获取 PushKey
+        💡 提示：微信搜索并关注「方糖」公众号，点击「推送到手机」即可获得 SendKey。保存后，签到提醒将同步推送到您的微信。
     </div>
 
     <script src="popup.js"></script>
